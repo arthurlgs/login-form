@@ -1,73 +1,21 @@
-# React + TypeScript + Vite
+# 💻 Login Form - Dev em Dobro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and modern login form built during the Dev em Dobro online course.
 
-Currently, two official plugins are available:
+##  Technologies Used
+* Vite
+* React
+* TypeScript
+* Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Features
+* **Responsive Interface:** The layout adapts well to different screen sizes.
+* **Componentization:** Organized structure utilizing React functional components (`LoginForm.tsx`).
+* **Custom Styling:** Advanced use of Tailwind CSS to create inputs with specific colors and borders.
+* **Custom Checkbox:** Hiding the native checkbox input in favor of a styled and interactive visual element using Tailwind's `peer` class.
+* **Default Behavior Prevention:** Handling the form's `submit` event with React (`e.preventDefault()`) to avoid unnecessary page reloads.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+##  What I Learned
+* Further learn how to structure a basic project using **Vite** and **React**.
+* How to correctly type form events using **TypeScript** (`FormEvent<HTMLFormElement>`).
+* Interesting **Tailwind CSS** techniques, such as using pseudo-classes (`peer-checked`) to alter the style of sibling elements, making it incredibly easy to create custom checkboxes without relying on heavy JavaScript.
